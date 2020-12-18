@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Html Forms</h1>
+    <form action="./sucess.html">
+      <fieldset>
+        <legend>Input types</legend>
+        <label for="fname">Name:</label>
+        <input
+          id="fname"
+          size="2px"
+          maxlength="2"
+          type="text"
+          placeholder="Your first name"
+          readonly
+          value="Ismail"
+        />
+        <br />
+        <fieldset>
+          <legend>One More Section</legend>
+          <label for="male">Humman</label>
+          <input name="gender" checked id="male" type="radio" />
+
+          <label for="female">Alien</label>
+          <input name="gender" id="female" type="radio" />
+          <br />
+          <input type="button" value="Push Me" />
+          <br />
+        </fieldset>
+
+        <input type="checkbox" checked />
+        <br />
+        <input type="color" />
+        <br />
+        <input type="date" />
+        <br />
+        <input type="datetime-local" />
+        <br />
+        <input type="email" />
+        <br />
+        <input type="file" />
+        <br />
+        <input type="month" />
+        <br />
+        <input type="week" required />
+        <br />
+        <input type="number" disabled placeholder="Your phone number" />
+        <br />
+        <input type="hidden" />
+        <input type="password" placeholder="Your password" />
+        <br />
+        <input name="test" type="radio" />
+        <input name="test" type="radio" />
+        <br />
+        <input type="range" />
+        <br />
+        <input type="search" />
+        <br />
+        <input type="time" />
+        <br />
+        <input type="url" />
+      </fieldset>
+
+      <br />
+
+      <select multiple>
+        <option>Choose the best answer</option>
+        <option selected>Milk</option>
+        <option>Water</option>
+        <option selected>Gas</option>
+      </select>
+      <br />
+      <textarea
+        placeholder="Your Postal Aderess"
+        rows="20"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <button>Click Me</button>
+      <br />
+
+      <input type="submit" />
+    </form>
+    
+  </body>
+</html>
