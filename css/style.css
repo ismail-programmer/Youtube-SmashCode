@@ -1,6 +1,10 @@
-
-
- p{
+.heading{
     color:yellow;
-} 
-
+    border-width:10px;
+border-style:   solid ;
+border-color:green red yellow purple;
+/* border-top-color:green;
+border-left-color:red;
+border-bottom-color:yellow;
+border-right-color:purple; */
+}
