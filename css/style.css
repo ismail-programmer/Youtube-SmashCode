@@ -1,10 +1,12 @@
-.heading{
-    color:yellow;
-    border-width:10px;
-border-style:   solid ;
-border-color:green red yellow purple;
-/* border-top-color:green;
-border-left-color:red;
-border-bottom-color:yellow;
-border-right-color:purple; */
+.heading {
+  color: yellow;
+  /* border-width: 10px;
+  border-style: solid;
+  border-color: green ; */
+  border: 10px solid red;
+  /* border-top-width: 20px;
+  border-left-width: 5px;
+  border-bottom-width: 7px;
+  border-right-width: 30px; */
+border-radius: 10px;
 }
