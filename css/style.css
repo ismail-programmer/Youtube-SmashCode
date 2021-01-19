@@ -1,5 +1,5 @@
 .heading {
-  color: yellow;
+  color: green;
   /* border-width: 10px;
   border-style: solid;
   border-color: green ; */
@@ -8,5 +8,15 @@
   border-left-width: 5px;
   border-bottom-width: 7px;
   border-right-width: 30px; */
-border-radius: 10px;
+  border-radius: 10px;
+  /* margin:30px */
+}
+
+.one1 {
+  border: 2px solid red;
+  margin-bottom: 40px;
+}
+.one2 {
+  border: 2px solid red;
+  margin-top: 30px;
 }
