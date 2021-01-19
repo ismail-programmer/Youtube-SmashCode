@@ -10,13 +10,20 @@
   border-right-width: 30px; */
   border-radius: 10px;
   /* margin:30px */
+  /* padding: 10%; */
 }
 
 .one1 {
   border: 2px solid red;
   margin-bottom: 40px;
+  /* padding: inherit; */
 }
 .one2 {
+  width:100px;
   border: 2px solid red;
-  margin-top: 30px;
+  margin: auto;
+  padding: 20px; 
+  box-sizing: border-box;
+  /* width 100px + padding 50px 
+  total width = 150px */
 }
