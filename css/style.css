@@ -1,29 +1,24 @@
 .heading {
   color: green;
-  /* border-width: 10px;
-  border-style: solid;
-  border-color: green ; */
   border: 10px solid red;
-  /* border-top-width: 20px;
-  border-left-width: 5px;
-  border-bottom-width: 7px;
-  border-right-width: 30px; */
   border-radius: 10px;
-  /* margin:30px */
-  /* padding: 10%; */
+  min-height: 50%;
+  min-width: 200px;
+  max-width: 300px;
 }
 
 .one1 {
   border: 2px solid red;
-  margin-bottom: 40px;
+  /* width: inherit; */
+  /* margin-bottom: 40px; */
   /* padding: inherit; */
 }
 .one2 {
-  width:100px;
+  width: 100px;
   border: 2px solid red;
-  margin: auto;
-  padding: 20px; 
-  box-sizing: border-box;
+  margin: 0;
+  /* padding: 20px; */
+  /* box-sizing: border-box; */
   /* width 100px + padding 50px 
   total width = 150px */
 }
