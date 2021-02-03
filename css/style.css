@@ -23,7 +23,11 @@
   /* width = mentined width 150px + 10px + 10px + 5px + 5px  + 10px +10px*/
 }
 
-.test{
-  /* border:2px solid red; */
-  outline-style:solid;
+.test {
+  border: 2px solid red;
+  /* outline-style:solid;
+  outline-width: 5px;
+  outline-color: #000; */
+  outline: 4px solid yellow;
+  outline-offset: 10px;
 }
