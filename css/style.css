@@ -15,11 +15,15 @@
 }
 .heading {
   color: green;
-   border: 5px solid red;
- padding: 10px;
+  border: 5px solid red;
+  padding: 10px;
   margin: 10px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   width: 200px;
   /* width = mentined width 150px + 10px + 10px + 5px + 5px  + 10px +10px*/
 }
 
+.test{
+  /* border:2px solid red; */
+  outline-style:solid;
+}
