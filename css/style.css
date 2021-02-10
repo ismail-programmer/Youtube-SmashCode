@@ -28,6 +28,22 @@
   /* outline-style:solid;
   outline-width: 5px;
   outline-color: #000; */
-  outline: 4px solid yellow;
-  outline-offset: 10px;
+  outline: 2px solid yellow;
+  color: purple;
+  background: burlywood;
+  text-align: left;
+  direction:ltl ;
+
+}
+
+
+.align1{
+  vertical-align: middle;
+}
+#link{
+  /* text-decoration: none; */
+}
+#text12{
+  text-decoration: underline;
+  color:blue
 }
