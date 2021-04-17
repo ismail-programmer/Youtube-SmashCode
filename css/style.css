@@ -1,12 +1,8 @@
 * {
-  font-family: "Times New Roman", Arial, fantasy;
+  /* font-family: "Times New Roman", Arial, fantasy; */
   font-style: italic;
   font-weight: bold;
   font-variant: small-caps;
- 
-
-
-
 }
 
 .one1 {
@@ -32,6 +28,7 @@
   box-sizing: border-box;
   /* width: 200px; */
   /* width = mentined width 150px + 10px + 10px + 5px + 5px  + 10px +10px*/
+  font-family: "Pacifico", cursive;
 }
 
 .test {
@@ -55,8 +52,10 @@
 .test32 {
   font-weight: 600;
 }
-.font{
+.font {
   font-size: 10vw;
+  font-family: "Trispace", sans-serif;
+  color: blueviolet;
 }
 
 .align1 {
