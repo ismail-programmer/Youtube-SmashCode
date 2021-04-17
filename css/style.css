@@ -1,5 +1,12 @@
 * {
   font-family: "Times New Roman", Arial, fantasy;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+ 
+
+
+
 }
 
 .one1 {
@@ -44,6 +51,12 @@
   /* word-spacing:10px; */
   white-space: pre;
   text-shadow: 2px 1px 2px green;
+}
+.test32 {
+  font-weight: 600;
+}
+.font{
+  font-size: 10vw;
 }
 
 .align1 {
