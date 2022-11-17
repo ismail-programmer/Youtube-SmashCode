@@ -1,8 +1,7 @@
-* {
-  /* font-family: "Times New Roman", Arial, fantasy; */
-  font-style: italic;
-  font-weight: bold;
-  font-variant: small-caps;
+
+
+.heading321{
+  font: bold small-caps 300px 32px Verdana  !important;
 }
 
 .one1 {
