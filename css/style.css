@@ -1,5 +1,12 @@
 
+.cssfontspair{
+  font: italic small-caps lighter 15px Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif ;
+}
 
+.parapair{
+  font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+
+}
 .heading321{
   font: bold small-caps 300px 32px Verdana  !important;
 }
