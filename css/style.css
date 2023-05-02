@@ -1,14 +1,52 @@
-
-.cssfontspair{
-  font: italic small-caps lighter 15px Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif ;
+.newlink{
+  background-color:
+  #f44336;
+   color: white;
+   padding: 14px 25px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+  
+}
+.liststyle{
+  list-style-type: none;
+}
+.liststyle1{
+  list-style-type: lower-roman;
+}
+.newlink:active{
+  text-decoration: none !important;
 }
 
-.parapair{
+/* .linktest:hover {
+
+  text-decoration: none;
+
+}
+
+.linktest:visited {
+
+  text-decoration: double;
+
+}
+
+.linktest:active {
+  text-decoration: line-through;
+
+} */
+
+
+.cssfontspair {
+  font: italic small-caps lighter 15px Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+}
+
+.parapair {
   font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
 
 }
-.heading321{
-  font: bold small-caps 300px 32px Verdana  !important;
+
+.heading321 {
+  font: bold small-caps 300px 32px Verdana !important;
 }
 
 .one1 {
@@ -17,6 +55,7 @@
   /* margin-bottom: 40px; */
   /* padding: inherit; */
 }
+
 .one2 {
   width: 100px;
   border: 2px solid red;
@@ -26,6 +65,7 @@
   /* width 100px + padding 50px 
   total width = 150px */
 }
+
 .heading {
   color: green;
   border: 5px solid red;
@@ -55,11 +95,13 @@
   white-space: pre;
   text-shadow: 2px 1px 2px green;
 }
+
 .test32 {
   font-weight: 600;
-  
-  
+
+
 }
+
 .font {
   font-size: 10vw;
   font-family: "Trispace", sans-serif;
