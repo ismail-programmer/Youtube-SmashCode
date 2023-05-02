@@ -116,3 +116,23 @@
   text-decoration: underline;
   color: blue;
 }
+
+.listitem{
+  /* display: inline; */
+  display: block;
+}
+.test231{
+  
+  display: block;
+}
+.test21{
+  /* display: none; */
+  visibility: hidden;
+}
+
+.width{
+  border: 2px solid red;
+  max-width: 300px;
+  margin: auto;
+  /* min-width: 100px; */
+}
