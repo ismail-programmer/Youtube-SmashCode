@@ -1,3 +1,45 @@
+.floatgeneral {
+  /* float: left; */
+}
+
+.div1 {
+  float: left;
+  background-color: red;
+}
+
+.div2 {
+  /* float: left; */
+  clear: both;
+  background-color: green;
+}
+
+.div3 {
+  float: right;
+  background-color: blue;
+}
+
+.display34 {}
+
+.word {
+  background-color: yellow;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.line {
+  background-color: blue;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.inlinespan {
+  background-color: red;
+
+
+}
+
 .newlink {
   background-color:
     #f44336;
