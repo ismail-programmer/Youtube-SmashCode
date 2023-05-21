@@ -1,20 +1,23 @@
-.newlink{
+.newlink {
   background-color:
-  #f44336;
-   color: white;
-   padding: 14px 25px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-  
+    #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
 }
-.liststyle{
+
+.liststyle {
   list-style-type: none;
 }
-.liststyle1{
+
+.liststyle1 {
   list-style-type: lower-roman;
 }
-.newlink:active{
+
+.newlink:active {
   text-decoration: none !important;
 }
 
@@ -117,22 +120,33 @@
   color: blue;
 }
 
-.listitem{
+.listitem {
   /* display: inline; */
   display: block;
 }
-.test231{
-  
+
+.test231 {
+
   display: block;
 }
-.test21{
+
+.test21 {
   /* display: none; */
   visibility: hidden;
 }
 
-.width{
+.width {
   border: 2px solid red;
-  max-width: 300px;
+  width: 300px;
+  height: 100px;
   margin: auto;
-  /* min-width: 100px; */
+  /* overflow: auto; */
+
+  /* top to bottom */
+  overflow-y: hidden;
+
+  /* left to right */
+  overflow-x: visible;
+
+
 }
