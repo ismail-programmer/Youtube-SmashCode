@@ -1,3 +1,42 @@
-p{
-    background-color:aqua;
+p {
+    background-color: aqua;
+}
+
+/* using properties to align items */
+.center1 {
+
+    background-color: red;
+    border: 2px solid;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.center2 {
+    background-color: blue;
+    border: 2px solid green;
+    /* position: absolute; */
+    right: 0px;
+    width: 500px;
+    text-align: center;
+}
+
+.center3 {
+    background-color: yellow;
+    border: 2px solid green;
+    text-align: center;
+    float: left;
+    width: 300px;
+    padding: 15px;
+
+}
+
+.center4 {
+    background-color: grey;
+    border: 2px solid green;
+    clear: left;
+    width: 300px;
+    padding: 70px 70px;
+    text-align: center;
+
 }
