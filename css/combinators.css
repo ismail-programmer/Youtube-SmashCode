@@ -1,0 +1,20 @@
+div {
+    border: 2px solid;
+}
+
+div h1 {
+    color: blue;
+    text-align: center;
+}
+
+div>p {
+    color: red;
+}
+
+div+p {
+    background-color: yellow;
+}
+
+div~p {
+    font-size: 32px;
+}
