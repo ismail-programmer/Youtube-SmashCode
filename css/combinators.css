@@ -76,7 +76,33 @@ p.element::first-line {
     color: green;
 }
 
-::selection{
+::selection {
 
     color: yellow;
+}
+
+a[target] {
+    border: 2px solid red;
+}
+
+
+a[target="blank"] {
+    cursor: help;
+    color: yellow;
+}
+
+[class|="one"] {
+    color: red;
+}
+
+[class^="t"] {
+    color: yellow;
+}
+
+[class$="l"] {
+    color: deeppink;
+}
+
+[class*="ee"] {
+    font-style: italic;
 }
