@@ -1,3 +1,24 @@
+/* *{
+    background-color: red;
+} */
+/* scoe 1 */
+span {
+    color: red;
+}
+
+/* scoe 10+1=11 */
+span.test11 {
+
+    color: green;
+}
+
+/* scoe 100+1=11 */
+span#test22 {
+
+    color: yellow !important;
+}
+
+
 div {
     border: 2px solid;
 }
