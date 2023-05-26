@@ -18,3 +18,64 @@ div+p {
 div~p {
     font-size: 32px;
 }
+
+/* psuodo class */
+
+
+/* unvisted link */
+.sudo:link {
+    color: green;
+    text-decoration: none;
+}
+
+/* hover */
+.sudo:hover {
+    color: red;
+}
+
+/* visited link */
+
+.sudo:visited {
+    color: brown;
+}
+
+/* active link */
+.sudo:active {
+    color: black;
+}
+
+p:first-child {
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+p i:first-child {
+    color: hotpink;
+}
+
+
+/* psduo elements */
+p::first-line {
+    text-decoration: underline;
+}
+
+p::first-letter {
+    font-size: 32px;
+}
+
+h1::before {
+    content: url(../HTML/assets/icons.png);
+}
+
+h1::after {
+    content: url(../HTML/assets/picture2.jfif);
+}
+
+::marker {
+    color: pink;
+}
+
+::selection {
+    background-color: black;
+}
