@@ -12,97 +12,9 @@ div>p {
 }
 
 div+p {
-    background-color: grey;
+    background-color: yellow;
 }
 
 div~p {
     font-size: 32px;
-}
-
-
-/* unvisted */
-a:link {
-    color: red;
-}
-
-/* mouse over */
-a:hover {
-    color: yellow;
-}
-
-/* visited link */
-a:visited {
-    color: brown;
-}
-
-/* active */
-a:active {
-    color: black;
-}
-
-/* .classname:hover{
-property: vale
-} */
-
-p:first-child {
-    color: blueviolet;
-}
-
-/* psodo element */
-p.element::first-line {
-    color: red;
-    /* font-size: 32px; */
-}
-
-.element::first-letter {
-    color: gold;
-}
-
-.heading::before {
-    content: url(../HTML/assets/icons.png);
-
-}
-
-.heading::after {
-    content: url(../HTML/assets/picture2.jfif);
-
-}
-
-.list1 {
-    list-style-type: circle;
-}
-
-::marker {
-    color: green;
-}
-
-::selection {
-
-    color: yellow;
-}
-
-a[target] {
-    border: 2px solid red;
-}
-
-
-a[target="blank"] {
-    cursor: help;
-    color: yellow;
-}
-
-[class|="one"] {
-    color: red;
-}
-
-[class^="t"] {
-    color: yellow;
-}
-
-[class$="l"] {
-    color: deeppink;
-}
-
-[class*="ee"] {
-    font-style: italic;
 }
