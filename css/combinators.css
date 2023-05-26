@@ -79,3 +79,37 @@ h1::after {
 ::selection {
     background-color: black;
 }
+
+/* attribute selectors */
+
+/* exact attribute & tag*/
+a[target] {
+    color: aqua;
+}
+
+/* exact attribute + exact value & tag */
+a[target="top"] {
+    color: purple;
+}
+
+/* with hyphen or exact value */
+li[class|="test"] {
+    color: green;
+}
+
+/* start with value */
+li[class^="te"] {
+    color: red;
+}
+
+/* end with value */
+li[class$="p"] {
+    color: yellow;
+}
+
+
+
+/* anywhere with value */
+li[class*="op"] {
+    background-color: red;
+}
