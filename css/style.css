@@ -2,6 +2,26 @@
   /* float: left; */
 }
 
+body {
+  background-color: red;
+}
+
+/* media queries */
+/* styles for 900px devices */
+@media only screen and (max-width: 900px) {
+
+  body {
+    background: #000;
+    color: green;
+
+  }
+
+
+
+}
+
+
+
 .div1 {
   float: left;
   background-color: red;
