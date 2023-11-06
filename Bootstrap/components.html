@@ -167,7 +167,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
+    <h1>
 
+        Badges
+    </h1>
     <!-- badges -->
     <h6>Example heading <span class="badge bg-secondary">New</span></h1>
         <h2>Example heading <span class="badge bg-warning">New</span></h2>
@@ -186,26 +189,256 @@
         </button>
 
         <!-- breadcrums -->
+        <h1> Breadcrums</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Home</li>
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
             </ol>
-          </nav>
-          
-          <nav aria-label="breadcrumb">
+        </nav>
+
+        <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
             </ol>
-          </nav>
-          
-          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        </nav>
+
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./gutters.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="./alignment.html">Library</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Data</li>
+                <li class="breadcrumb-item"><a href="./gutters.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="./alignment.html">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
-          </nav>
+        </nav>
+        <!-- buttons -->
+        <h1> Buttons </h1>
+        <a href="https://smashcode.dev/" type="button" class="btn btn-outline-primary disabled"
+            tabindex="-1">Primary</a>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger brn-lg">Danger</button>
+        <button type="button" class="btn btn-outline-warning btn-sm">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+        </div>
+
+
+        <p class="d-inline-flex gap-1">
+            <a href="#" class="btn" role="button" data-bs-toggle="button">Toggle link</a>
+            <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle
+                link</a>
+            <a class="btn disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+        </p>
+        <p class="d-inline-flex gap-1">
+            <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
+            <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active
+                toggle link</a>
+            <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled
+                toggle link</a>
+        </p>
+
+
+
+
+        <!-- button group -->
+
+
+
+        <h1> button group</h1>
+
+
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+        </div>
+
+
+
+        <br>
+        <br>
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropstart" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropend" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- cards -->
+        <h1> Cards </h1>
+
+        <div class="card" style="width: 18rem;">
+            <img src="./download.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+
+
+        <!-- cards with grid -->
+        <div class="row">
+            <div class="col-sm-3 mb-3 mb-sm-0">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- image overlays -->
+        <div class="card text-bg-dark">
+            <img width="200px" height=""
+                src="data:image/jpeg;base64,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"
+                class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+
+        <!-- cards group -->
+        <div class="card-group">
+            <div class="card">
+                <img src="./download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
