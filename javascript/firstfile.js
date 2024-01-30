@@ -47,3 +47,5 @@ console.log(ismail1);
 // const smash1;
 //  smash1 = 2
 
+const first = [ " ismail" , " Smash", "Code "]
+let second = { firstname: "ismail", age: 23};
