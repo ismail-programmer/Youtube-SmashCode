@@ -47,5 +47,50 @@ console.log(ismail1);
 // const smash1;
 //  smash1 = 2
 
-const first = [ " ismail" , " Smash", "Code "]
-let second = { firstname: "ismail", age: 23};
+const first = [" ismail", " Smash", "Code "]
+let second = { firstname: "ismail", age: 23 };
+
+// objects 
+const person = {
+    firstname: "Muhammad",
+    lastname: "Ismail",
+    age: 23,
+    student: true,
+    fullname: function () {
+        alert(this.firstname + " " + this.lastname)
+    },
+    'Full Adress': " Faislabad Pakitan",
+    cars: {
+        car1: "BMW",
+        car2: "AQUA",
+        CAR3: "Sonata"
+    },
+    Meal: "Rice",
+    Phone: 123456,
+    'Mobile Phone': {
+        'Mobile first': "Qmobile",
+        'Mobile second': "Iphone",
+
+    },
+};
+// acess with dot notation
+console.log("Person object age " + person.age);
+// acess with array lke method
+console.log("Person object firstname is " + person["firstname"]);
+console.log("Person object Adress is " + person["Full Adress"]);
+//change obj values
+person.age = 24;
+console.log("changed Person object age is " + person["age"]);
+// new value add
+person.Favcol = "Black";
+console.log("Person object Favourite color is " + person.Favcol);
+// method acess
+person.fullname();
+// delete value;
+console.log("Person object Lastname is " + person.lastname);
+delete person.lastname;
+console.log("Person object Lastname is " + person.lastname);
+// nested obj acess with dot notation
+console.log("nested Person object car1 name is " + person.cars.car1);
+// nested obj acess with array like method
+console.log("nested Person object Mobile second name is " + person["Mobile Phone"]["Mobile second"]);
