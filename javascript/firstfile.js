@@ -50,6 +50,7 @@ console.log(ismail1);
 const first = [" ismail", " Smash", "Code "]
 let second = { firstname: "ismail", age: 23 };
 
+
 // objects 
 const person = {
     firstname: "Muhammad",
@@ -85,7 +86,7 @@ console.log("changed Person object age is " + person["age"]);
 person.Favcol = "Black";
 console.log("Person object Favourite color is " + person.Favcol);
 // method acess
-person.fullname();
+// person.fullname();
 // delete value;
 console.log("Person object Lastname is " + person.lastname);
 delete person.lastname;
@@ -94,3 +95,23 @@ console.log("Person object Lastname is " + person.lastname);
 console.log("nested Person object car1 name is " + person.cars.car1);
 // nested obj acess with array like method
 console.log("nested Person object Mobile second name is " + person["Mobile Phone"]["Mobile second"]);
+
+// array
+const persons = ["Asad", "Ismail", "Ali"];
+const students = [];
+students[0] = "Umar";
+// acess with index
+let name1 = persons[1];
+console.log("array namme is " + name1)
+// change value with index
+console.log("array namme is " + persons[2])
+persons[2] = "Mnaan"
+// let name2 = persons[2]
+console.log("array namme is " + persons[2])
+const different = [
+    "Ali", // string
+    23, // number
+    false, // boolean
+    persons1 = { car1: "BMW", car2: "bugati" }, // object
+    Names = ["ismail", "smash", "bakkar"] // nested array
+]
