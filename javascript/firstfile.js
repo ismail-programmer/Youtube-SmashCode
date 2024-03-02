@@ -115,3 +115,91 @@ const different = [
     persons1 = { car1: "BMW", car2: "bugati" }, // object
     Names = ["ismail", "smash", "bakkar"] // nested array
 ]
+
+
+const fruits = ["Apple", "Orange", 321, "Mango"];
+let count = fruits.length;
+//  firstElementArray  camel casing
+// firstelementarray small letters
+//  FIRSTELEMENTARRAY captial letters
+
+let firstFruit = fruits[0];
+let lastFruit = fruits[3];
+let lastFruitComplex = fruits[fruits.length - 1]
+let lastFruitComplex1 = fruits[count - 1];
+console.log(lastFruitComplex);
+console.log(lastFruitComplex1);
+let stringArray = fruits.toString();
+console.log("THe stringed Array is this: " + stringArray);
+let joinArray = fruits.join(" separate ");
+console.log(joinArray)
+// to delete last index element use pop
+fruits.pop();
+
+// to add last index element use push
+fruits.push("Ismail");
+// fruits.push("Smash");
+// fruits.pop();
+
+
+// to delete first index element use shift
+console.log("default array before shift " + fruits)
+console.log("on first index we have " + fruits[0])
+fruits.shift();
+console.log("changed array after shift " + fruits)
+console.log("on first index we have " + fruits[0])
+
+
+// to addd at first index element use unshift
+console.log("normal array before unshift " + fruits + " and our first fruit is " + fruits[0]);
+fruits.unshift("Water Melon")
+console.log("modify array after unshift " + fruits + " and our first fruit is " + fruits[0]);
+
+
+// to delete a specifc index element we use delete
+console.log("we have at 2 index " + fruits[2])
+console.log(fruits)
+delete fruits[2];
+console.log("array after delet index 2 " + fruits)
+
+
+let newarr1 = [1, 2, 3, 4, 5]
+let newarr2 = [6, 7, 8, 9, 10]
+let merger = newarr1.concat(newarr2);
+console.log(merger);
+
+
+let flat1 = [1, 2, 3, [4, 5], 6, 7, 8, 9, 10]
+let complexFlat = [1, 2, [3, 4, [5, 6, [7, 8], 9, 10], 11, 12], 13, 14]
+let flatedArray = flat1.flat()
+let complexFlatedArray1 = complexFlat.flat()
+let complexFlatedArray2 = complexFlat.flat(2)
+let complexFlatedArray3 = complexFlat.flat(3)
+console.log(complexFlatedArray1)
+console.log(complexFlatedArray2)
+console.log(complexFlatedArray3)
+
+// splice method
+let fruits1 = ["Apple", "mango", "Banana", "Stawberry"]
+console.log("before splice " + fruits1)
+fruits1.splice(1, 2, "kiwi", 45, "water melon");
+// fruits1.splice(1, 2);
+console.log("after splice " + fruits1);
+
+
+// slice method
+let sliceArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let slicedArray = sliceArray.slice(3, 6);
+console.log(sliceArray)
+console.log(slicedArray)
+
+// indexOf
+let indexmethod = [1, 2, 3, 4, 5, 5, 1, 2, 3, 4]
+console.log(indexmethod.indexOf(4, 2))
+
+
+//lastindex
+let lastindexmethod = [1, 2, 3, 4, 5, 5, 1, 2, 3, 4]
+console.log(indexmethod.lastIndexOf(4))
+
+
