@@ -203,3 +203,41 @@ let lastindexmethod = [1, 2, 3, 4, 5, 5, 1, 2, 3, 4]
 console.log(indexmethod.lastIndexOf(4))
 
 
+// sort
+const names = ["Ismail", "Smash", "Code"]
+console.log("before sort method " + names)
+names.sort()
+console.log("after sort method " + names)
+
+// tosorted 2023
+
+const names1 = ["Ali", "dansh", "Smash", "Shahroz", "Code"]
+console.log("before tosorted " + names1)
+const sortedArray = names1.toSorted();
+console.log("after tosorted " + names1)
+console.log("sorted array " + sortedArray)
+
+//reverse
+console.log("before reverse " + names1)
+names1.reverse()
+console.log("after reverse " + names1)
+
+// numeric sort with compare function
+
+const points = [45, 23, 12, 4, 1, 56, 100]
+console.log("before sorted compare function " + points)
+points.sort(
+    function (a, b) {
+        return a - b;
+    }
+)
+//  for decending order
+// points.sort(
+//     function (a, b) {
+//         return b - a;
+//     }
+// )
+
+console.log("after sorted compare function " + points)
+console.log("min num " + points[0] + " and max number " + points[points.length - 1])
+
