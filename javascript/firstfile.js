@@ -241,3 +241,59 @@ points.sort(
 console.log("after sorted compare function " + points)
 console.log("min num " + points[0] + " and max number " + points[points.length - 1])
 
+// arithmetic operators
+let add = 16 + 5; // sum
+let minus = 16 - 5; // subtract
+let multiply = 4 * 4; // multiply
+let division = 25 / 5; //divison
+
+let modulus = 26 % 5 // moduls
+let exponent = 2 ** 5 // exponent
+
+console.log("Add answer is " + add + "subtract answer is: " + minus)
+
+
+let age = 20;
+console.log("before increment " + age)
+age++;
+console.log("after increment " + age)
+age--;
+console.log("after decrement " + age)
+
+// prefix
+let ages = 16;
+console.log("ages before prefix increment " + ages)
+let newAge = ++ages;  // 1 + ages(16)
+console.log("ages after prefix increment " + ages)
+console.log("newAge after prefix increment " + newAge)
+
+
+//postfix
+let age1 = 42;
+console.log("age1 before postfix increment " + age1);
+let newAge1 = age1++; //age1(16) + 1
+console.log("age1 after postfix increment " + age1);
+console.log("newAge after postfix increment " + newAge1);
+
+//BODMAS
+
+let expresion = 5 * 3 / 3 + 4 * 2 - 3;
+console.log(expresion)
+console.log("5 * 3 / 3 + 4 * 2 -3")
+
+// asigment operator
+
+let one = 10
+let two = 10
+
+let three = one + two;
+console.log(one)
+one += two  // one = one + two
+console.log(one)
+one -= two
+one *= two
+one /= two
+one %= two
+
+
+
