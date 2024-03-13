@@ -276,10 +276,18 @@ console.log("age1 after postfix increment " + age1);
 console.log("newAge after postfix increment " + newAge1);
 
 //BODMAS
+//  5 + 2 * 3 / 3
+let state = 5 + 2 * 3 / 3;
+console.log(" 5 + 2 * 3 / 3 ans is: " + state)
 
-let expresion = 5 * 3 / 3 + 4 * 2 - 3;
-console.log(expresion)
-console.log("5 * 3 / 3 + 4 * 2 -3")
+
+
+
+
+
+
+
+
 
 // asigment operator
 
