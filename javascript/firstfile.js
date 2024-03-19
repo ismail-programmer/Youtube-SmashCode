@@ -303,5 +303,39 @@ one *= two
 one /= two
 one %= two
 
+// cmparison operator
+
+let sum1 = 5;
+let sum2 = 6;
+console.log("Equal value " + (sum1 == 5));
+console.log("Equal value " + (sum1 == "5"));
+console.log("Equal value and equal type " + (sum1 === 5));
+console.log("Equal value and equal type " + (sum1 === "5"));
+console.log("not equal to value " + (sum1 != "6"));
+console.log("not equal to value and type " + (sum1 !== "5"));
+console.log("greater than " + (sum1 > 4));
+console.log("greater than and equal yo " + (sum1 >= 5));
+console.log("less than " + (sum1 < 8));
+console.log("less than and equal to " + (sum1 <= 8));
+
+// logical operator
+console.log("AND operator is " + (sum1 == 5 && sum2 == 6));
+console.log("OR operator is " + (sum1 == 5 || sum2 == 2));
+console.log("NOT operator is " + (sum1 != sum2));
+
+// Ternary operator
+
+let years = 19;
+let message = (years < 18) ? " You win" : "You lose"
+console.log(message)
+
+
+
+
+
+
+
+
+
 
 
