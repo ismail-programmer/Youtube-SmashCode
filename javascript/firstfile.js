@@ -330,6 +330,22 @@ let message = (years < 18) ? " You win" : "You lose"
 console.log(message)
 
 
+// conditional statments
+condition = 30
+if (condition < 30) {
+    alert("Case 1")
+}
+else if (condition > 30) {
+    alert("case 2")
+}
+else {
+    alert("case 3")
+    console.log("HI")
+}
+
+
+
+
 
 
 
