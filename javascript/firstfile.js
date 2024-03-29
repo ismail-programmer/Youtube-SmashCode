@@ -339,9 +339,61 @@ else if (condition > 30) {
     alert("case 2")
 }
 else {
-    alert("case 3")
+    // alert("case 3")
     console.log("HI")
 }
+
+
+// switch case
+let grade = "0"
+switch (grade) {
+    case 0:
+        console.log("Your grade is " + grade);
+        break;
+    case "B":
+        console.log("Your grade is " + grade);
+        break;
+    default:
+        console.log("You have input a wrong grade");
+        break;
+    case "C":
+        console.log("Your grade is " + grade);
+        break;
+    case "D":
+        console.log("Your grade is " + grade);
+        break;
+    case "F":
+        console.log("Your grade is " + grade);
+        break;
+}
+
+// switch statement common cases
+let x1 = 4;
+let y1 = 1;
+
+
+switch (x1 + y1) {
+
+    case 0:
+    case 2:
+    case 6:
+        console.log("Your number is even");
+        break;
+    case 1:
+    case 3:
+    case 5:
+        console.log("Your number is odd");
+        break;
+    default:
+        console.log("Not a number");
+
+
+
+
+
+
+}
+
 
 
 
