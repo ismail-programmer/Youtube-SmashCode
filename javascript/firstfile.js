@@ -344,6 +344,9 @@ else {
 }
 
 
+
+
+
 // switch case
 let grade = "0"
 switch (grade) {
@@ -386,14 +389,22 @@ switch (x1 + y1) {
         break;
     default:
         console.log("Not a number");
-
-
-
-
-
-
 }
 
+
+// for loop  with increment
+
+let loopx;
+for (loopx = 20; loopx <= 25; loopx++) {
+    console.log("iteration done and value of loopx is now " + loopx)
+}
+// for loop  with decrement
+
+
+let loopy;
+for (loopy = 20; loopy >= 15; loopy--) {
+    console.log("iteration done and value of loopy is now " + loopy)
+}
 
 
 
