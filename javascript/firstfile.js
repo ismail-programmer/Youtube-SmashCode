@@ -409,7 +409,24 @@ for (loopy = 20; loopy >= 15; loopy--) {
 
 
 
+// for of loop
+let names2 = ["Asad", "Ismail", "Ali"];
 
+for (let count of names2) {
+    console.log(count);
+}
+
+// for in loop
+
+let names3 = {
+    a: "Ismail",
+    b: "Ali",
+    c: "Asad"
+}
+
+for (let red in names3) {
+    console.log(red + " : " + names3[red])
+}
 
 
 
