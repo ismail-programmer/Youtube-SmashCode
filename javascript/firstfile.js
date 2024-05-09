@@ -429,6 +429,21 @@ for (let red in names3) {
 }
 
 
+// while loop
+
+let i = 1;
+while (i < 10) {
+    console.log("while loop " + i)
+}
+
+
+// do while loop
+let j = 1
+do {
+    console.log("do while loop " + j);
+    j++;
+} while (j < 10)
+
 
 
 
