@@ -434,6 +434,7 @@ for (let red in names3) {
 let i = 1;
 while (i < 10) {
     console.log("while loop " + i)
+    i++;
 }
 
 
@@ -444,6 +445,47 @@ do {
     j++;
 } while (j < 10)
 
+
+// Function defined without defalt values
+
+function subtract1(a1, a2, a3) {
+
+    let result = a1 - a2 - a3;
+    console.log("Your subtract result is " + result);
+}
+
+// Function defined with defalt values
+function add1(a1 = 10, a2 = 20, a3 = 30) {
+
+    let result = a1 + a2 + a3;
+    console.log("Your add result is " + result);
+}
+
+
+//calling function without default values
+subtract1(40, 20, 10);
+//calling function with default values
+add1(30,);
+
+// Function defined without return
+
+function add2(a1, a2) {
+
+    let result = a1 + a2;
+
+}
+
+console.log(add2(2, 4));
+
+// Function defined with return
+
+function add3(a1, a2) {
+
+    let result = a1 * a2;
+    return result
+}
+
+console.log(add3(2, 4));
 
 
 
