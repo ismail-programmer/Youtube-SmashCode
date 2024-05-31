@@ -522,7 +522,7 @@ console.log("this is global  variable outside of the function " + result332)
 let calculateSum = (n) => {
     let sum = 0;
 
-// loop from 1 to n and add each number to sum
+    // loop from 1 to n and add each number to sum
     for (let i = 1; i <= n; i++) {
         sum += i
     }
@@ -548,3 +548,10 @@ let countEvenNumber = (arr) => {
 
 const numbers3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
 console.log("Number of even numbers in the array are ", countEvenNumber(numbers3));
+
+const todayDate = new Date();
+
+const birthdatDate = new Date("28 june 2000 23:55:00");
+const birthdatDate1 = new Date(2005, 5, 28, 23, 55, 0, 0);
+const birthdatDate2 = new Date(2007, 5, 28);
+
