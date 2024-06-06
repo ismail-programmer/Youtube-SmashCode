@@ -555,3 +555,24 @@ const birthdatDate = new Date("28 june 2000 23:55:00");
 const birthdatDate1 = new Date(2005, 5, 28, 23, 55, 0, 0);
 const birthdatDate2 = new Date(2007, 5, 28);
 
+// Get methods
+
+const d1 = new Date()
+d1.getFullYear()
+let currentMonth = d1.getMonth() + 1
+let currentDay = d1.getDay()
+let currentHour = d1.getHours()
+let currentMinutes = d1.getMinutes()
+let currentSeconds = d1.getSeconds()
+console.log(currentHour)
+
+// UTC
+const currentUTCHour = d1.getUTCHours();
+console.log(currentUTCHour)
+
+//set time
+
+const pastDate = d1.setFullYear(1988, 3, 12);
+const pastHour = d1.setHours(13);
+const pastMinute = d1.setMinutes(57);
+console.log(pastHour)
