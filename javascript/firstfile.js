@@ -576,3 +576,31 @@ const pastDate = d1.setFullYear(1988, 3, 12);
 const pastHour = d1.setHours(13);
 const pastMinute = d1.setMinutes(57);
 console.log(pastHour)
+
+// string methods
+// 1. length method of string
+
+let name3 = "Ismailksmalkdmakdmaslkdmlskadmaklslreme"
+let totalCount = name3.length;
+console.log(totalCount);
+
+//2. extraction methods
+// a. charAt
+
+let extractedChar = name3``.charAt(5);
+console.log(extractedChar);
+
+// 2.charCodeAt
+
+let extractedCharCode = name3.charCodeAt(0);
+console.log(extractedCharCode);
+
+// c. at
+
+let negChar = name3.at(-3)
+console.log(negChar);
+
+// d propertyacess
+let value = name3[4]
+console.log(value);
+
