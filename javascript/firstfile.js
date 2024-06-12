@@ -604,3 +604,41 @@ console.log(negChar);
 let value = name3[4]
 console.log(value);
 
+// extracting string parts
+// slice, substring , substr
+
+//slice
+let names4 = "Ismail, Haroon, Sharoon";
+let part1 = names4.slice(8, 13);
+let part2 = names4.slice(8);
+let part3 = names4.slice(-7);
+console.log(part1);
+console.log(part2);
+console.log(part3);
+
+//substring
+let part4 = names4.substring(-3)
+console.log(part4);
+
+//substr
+let part5 = names4.substr(8, 5)
+console.log(part5);
+
+//upper and lower case
+
+let capital = names4.toUpperCase()
+console.log(capital);
+
+let small = names4.toLocaleLowerCase()
+console.log(small);
+
+
+// concat 
+
+let text1 = "Smash"
+let text2 = "Code"
+let fullName = text1.concat(" ", text2);
+console.log(fullName)
+
+
+
