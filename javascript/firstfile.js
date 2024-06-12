@@ -587,7 +587,7 @@ console.log(totalCount);
 //2. extraction methods
 // a. charAt
 
-let extractedChar = name3``.charAt(5);
+let extractedChar = name3.charAt(5);
 console.log(extractedChar);
 
 // 2.charCodeAt
