@@ -641,4 +641,25 @@ let fullName = text1.concat(" ", text2);
 console.log(fullName)
 
 
+// trim
+let untrimmedData = "       I Love Pakistan         ";
+console.log(untrimmedData);
+let trimmedData = untrimmedData.trim();
+// let trimmedData = untrimmedData.trimStart();
+// let trimmedData = untrimmedData.trimEnd();
+console.log(trimmedData);
+
+
+//PadStart
+let name4 = "Raza"
+let PadNameStart = name4.padStart(8, "Ali ");
+console.log(PadNameStart);
+
+//PadEnd
+let name5 = "Farooq"
+let PadNameEnd = name5.padEnd(10, " Ali");
+console.log(PadNameEnd);
+
+
+
 
