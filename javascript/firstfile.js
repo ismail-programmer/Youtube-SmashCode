@@ -661,5 +661,23 @@ let PadNameEnd = name5.padEnd(10, " Ali");
 console.log(PadNameEnd);
 
 
+// repeat method
+let name6 = "Smash Code ";
+let repeatName = name6.repeat(20);
+console.log(repeatName);
+console.log(name6);
+
+//replace method
+let text = "This is a youtube vdeo of Smash Code, vdeo and its a javascript vdeo."
+// with case senstive
+let replacedText = text.replace("vdeo", "video");
+
+// with case insenstive
+// let replacedText = text.replace(/vdeo/i, "video");
+
+// for all words in one string
+let replacedTextAll = text.replace(/vdeo/g, "video");
+console.log(replacedText)
+console.log(replacedTextAll)
 
 
