@@ -697,4 +697,30 @@ let text6 = "My name is Muhammad Ismail, I am Ismail."
 let matchResults = text6.match("Ismail");
 console.log(matchResults)
 
+// includes
+let includesVar = "My name is Ismail";
+let check1 = includesVar.includes("Ali");
+let check2 = includesVar.includes("Ismail");
+let check3 = includesVar.includes("ismail");
+console.log(check1);
+console.log(check2);
+console.log(check3);
+
+
+// startsWith
+let startVar = "This is a house";
+let check4 = startVar.startsWith("Th");
+let check5 = startVar.startsWith("is", 5);
+console.log(check4);
+console.log(check5);
+
+
+
+// endWith
+let endVar = "This is a house";
+let check6 = endVar.endsWith("se");
+let check7 = endVar.endsWith("is", 7);
+console.log(check6);
+console.log(check7);
+
 
