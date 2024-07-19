@@ -668,16 +668,33 @@ console.log(repeatName);
 console.log(name6);
 
 //replace method
-let text = "This is a youtube vdeo of Smash Code, vdeo and its a javascript vdeo."
+let text3 = "This is a youtube vdeo of Smash Code, vdeo and its a javascript vdeo."
 // with case senstive
-let replacedText = text.replace("vdeo", "video");
+let replacedText = text3.replace("vdeo", "video");
 
 // with case insenstive
 // let replacedText = text.replace(/vdeo/i, "video");
 
 // for all words in one string
-let replacedTextAll = text.replace(/vdeo/g, "video");
+let replacedTextAll = text3.replace(/vdeo/g, "video");
 console.log(replacedText)
 console.log(replacedTextAll)
+
+
+// indeOf
+let text4 = "My name is Muhammad Ismail, I am Ismail."
+let indexIsmail = text4.indexOf("Ismail", 21);
+console.log(indexIsmail);
+
+
+// LastIndeOf
+let text5 = "My name is Muhammad Ismail, I am Ismail."
+let lastIndexIsmail = text5.lastIndexOf("Ismail");
+console.log(lastIndexIsmail);
+
+//match
+let text6 = "My name is Muhammad Ismail, I am Ismail."
+let matchResults = text6.match("Ismail");
+console.log(matchResults)
 
 
