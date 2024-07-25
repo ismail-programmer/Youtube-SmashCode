@@ -724,3 +724,18 @@ console.log(check6);
 console.log(check7);
 
 
+// javascript boxes
+// 1. alert Box
+
+alert("Smash Code");
+alert(check7);
+
+// 2. Prompt Box
+
+let userValue = prompt("What is your age");
+alert("Your age is " + userValue)
+
+
+//3. Confirm Box
+var confirmationBox = confirm("Are you sure to delete");
+alert(confirmationBox);
