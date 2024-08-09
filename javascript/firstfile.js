@@ -58,7 +58,7 @@ const person = {
     age: 23,
     student: true,
     fullname: function () {
-        alert(this.firstname + " " + this.lastname)
+        // alert(this.firstname + " " + this.lastname)
     },
     'Full Adress': " Faislabad Pakitan",
     cars: {
@@ -333,10 +333,10 @@ console.log(message)
 // conditional statments
 condition = 30
 if (condition < 30) {
-    alert("Case 1")
+    // alert("Case 1")
 }
 else if (condition > 30) {
-    alert("case 2")
+    // alert("case 2")
 }
 else {
     // alert("case 3")
@@ -727,15 +727,41 @@ console.log(check7);
 // javascript boxes
 // 1. alert Box
 
-alert("Smash Code");
-alert(check7);
+// alert("Smash Code");
+// alert(check7);
 
 // 2. Prompt Box
 
-let userValue = prompt("What is your age");
-alert("Your age is " + userValue)
+// let userValue = prompt("What is your age");
+// alert("Your age is " + userValue)
 
 
 //3. Confirm Box
-var confirmationBox = confirm("Are you sure to delete");
-alert(confirmationBox);
+// var confirmationBox = confirm("Are you sure to delete");
+// alert(confirmationBox);
+
+
+// debugging
+
+const array1 = [2, 5, 9];
+
+let index41 = array1.findIndex(x => x == 5);
+// debugger
+console.log(index41);  // 1
+index41++ // 1 + 1 = 2
+// debugger
+console.log(index41);
+
+
+try {
+    let x32 = finalResult + 45;
+    console.log(x32);
+} catch (error) {
+    console.error("This is my error", error)
+}
+
+
+
+
+
+
