@@ -2,7 +2,7 @@
 
 let x;
 x = 3; // number
-let y = "Ismail"; // string, text string
+let y = "Ismail"; // stgit ring, text string
 
 x = 33
 // let y = "JOHN" // can't redeclare a let variable.
@@ -760,8 +760,62 @@ try {
     console.error("This is my error", error)
 }
 
+//synchronous
+// let name23 = prompt("what is your name");
+// let gender = prompt("what is your gender");
+// alert("Your name is " + name23 + " and your gender is " + gender);
+
+//asynchronous
+console.log("start with this line");
+function test23() {
+    setTimeout(() => {
+        console.log("this is second line")
+    }, 3000)
+}
+test23()
+console.log("end with this line");
 
 
 
 
+//callback function
 
+function test24(callback) {
+
+    setTimeout(() => {
+        const data1 = { name33: "ismail", age: 23 };
+        callback(data1)
+    }, 3000)
+}
+
+test24((data1) => {
+    console.log(data1)
+})
+
+
+// Promises
+
+function myData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data3 = { name: "Ismail", age: 19 };
+            if (data3.age > 21) {
+                resolve(data3.age)
+            } else {
+                reject("Age is not greater than 21")
+            }
+        }, 5000)
+    })
+}
+
+myData()
+    .then((age) => console.log("Age: ", age))
+    .catch((error) => console.log("Error", error))
+
+
+
+function test25() {
+    console.log("test25")
+}
+
+ test25()
