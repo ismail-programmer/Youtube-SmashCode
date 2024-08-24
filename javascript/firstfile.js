@@ -820,24 +820,34 @@ function test25() {
 
 test25()
 
-
 //DOM
-// Get By Id
+
+// get by id
 let uniqueElement = document.getElementById("unique");
 console.log(uniqueElement);
 
 //get by class
-let sameClasses = document.getElementsByClassName("test");
-console.log(sameClasses);
+let sameClass = document.getElementsByClassName("test");
+console.log(sameClass);
 
 //get by tag name
 let tags = document.getElementsByTagName("h1");
 console.log(tags);
 
-//get by query selector one
-let query = document.querySelector(".test");
-console.log(query);
+// get by query for singl element
+let querySingle = document.querySelector(".test");
 
-// get query selector all
+// get by query all
 let queryAll = document.querySelectorAll(".test");
-console.log(queryAll)
+console.log(queryAll);
+
+
+
+
+
+
+
+
+
+
+
