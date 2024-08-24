@@ -757,7 +757,7 @@ try {
     let x32 = finalResult + 45;
     console.log(x32);
 } catch (error) {
-    console.error("This is my error", error)
+    // console.error("This is my error", error)
 }
 
 //synchronous
@@ -818,4 +818,26 @@ function test25() {
     console.log("test25")
 }
 
- test25()
+test25()
+
+
+//DOM
+// Get By Id
+let uniqueElement = document.getElementById("unique");
+console.log(uniqueElement);
+
+//get by class
+let sameClasses = document.getElementsByClassName("test");
+console.log(sameClasses);
+
+//get by tag name
+let tags = document.getElementsByTagName("h1");
+console.log(tags);
+
+//get by query selector one
+let query = document.querySelector(".test");
+console.log(query);
+
+// get query selector all
+let queryAll = document.querySelectorAll(".test");
+console.log(queryAll)
