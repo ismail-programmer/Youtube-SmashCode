@@ -841,8 +841,46 @@ let querySingle = document.querySelector(".test");
 let queryAll = document.querySelectorAll(".test");
 console.log(queryAll);
 
+// Dom Mainpuation
+
+// textcontent
+let textofUniqueElement = uniqueElement.textContent;
+console.log(textofUniqueElement);
+uniqueElement.textContent = "Blank space"
+console.log(uniqueElement);
 
 
+// innerHtml
+let innerHtmlHead = querySingle.innerHTML;
+console.log(innerHtmlHead);
+querySingle.innerHTML = "<h2>This is Smash Code</h2>";
+console.log(querySingle);
+
+
+//get attribute 
+let attributeget = document.getElementById("ismail")
+let attributes = attributeget.getAttribute("id");
+console.log(attributes);
+
+//set attribute
+attributeget.setAttribute("class", "smash");
+let attributes1 = attributeget.getAttribute("class");
+console.log(attributes1);
+
+// styles
+attributeget.style.color = "red";
+querySingle.style.backgroundColor = "red";
+
+
+// Event Handling
+
+let button = document.getElementById("btn");
+button.addEventListener("click", function () {
+    alert("The button is pressed!")
+    console.log("button is pressed");
+    button.style.backgroundColor = "yellow";
+
+})
 
 
 
