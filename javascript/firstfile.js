@@ -883,6 +883,36 @@ button.addEventListener("click", function () {
 })
 
 
+//local stoarge methods
+
+//set item
+
+localStorage.setItem("age", "18");
+localStorage.setItem("Name", "Ismail");
+localStorage.setItem("age", "20");
+localStorage.setItem("gender", "male");
+
+// get item
+
+let name23 = localStorage.getItem("Name");
+console.log(name23);
+
+
+// remove item
+
+localStorage.removeItem("Name");
+let name24 = localStorage.getItem("Name");
+console.log(name24);
+
+// key
+
+let localStorageIndex = localStorage.key(3);
+console.log(localStorageIndex);
+
+
+//clear 
+localStorage.clear()
+
 
 
 
