@@ -911,7 +911,25 @@ console.log(localStorageIndex);
 
 
 //clear 
-localStorage.clear()
+// localStorage.clear()
+
+// stringify
+
+let user23 = {
+    name: "ismail",
+    age: 24,
+    city: "Faisalabad"
+}
+
+let stringedObj = JSON.stringify(user23);
+console.log(stringedObj);
+
+localStorage.setItem("userObj", stringedObj);
+
+let getObj = localStorage.getItem("userObj");
+
+let ParseObj = JSON.parse(getObj);
+console.log(ParseObj.city);
 
 
 
