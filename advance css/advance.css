@@ -1,0 +1,15 @@
+/* Flexbox */
+.container {
+    display: flex;
+    width: 300px;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* shorthand for flex direction and flex wrap */
+    flex-flow: row wrap
+}
+
+.flexItem {
+
+    background-color: blue;
+    border: 2px solid;
+}
