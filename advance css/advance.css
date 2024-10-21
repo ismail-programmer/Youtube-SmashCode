@@ -1,15 +1,26 @@
 /* Flexbox */
 .container {
+    background-color: yellow;
     display: flex;
-    width: 300px;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
+    width: 550px;
+    height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
     /* shorthand for flex direction and flex wrap */
-    flex-flow: row wrap
+    /* flex-flow: row wrap; */
+
+    /* for main axis */
+    justify-content: space-evenly;
+
+    /* for cross axis */
+    align-items: baseline;
+    align-content: center;
 }
 
 .flexItem {
 
     background-color: blue;
     border: 2px solid;
+    width: 200px;
+    height: 100px;
 }
