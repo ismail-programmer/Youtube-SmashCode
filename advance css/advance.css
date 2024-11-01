@@ -24,3 +24,24 @@
     width: 200px;
     height: 100px;
 }
+
+.container-2 , .container-3 {
+    background-color: red;
+    display: flex;
+    width: 550px;
+    height: 500px;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+
+}
+
+
+.item {
+
+    background-color: blue;
+    border: 2px solid;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+}
