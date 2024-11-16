@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    /* Full height */
+}
+
+.sidebar {
+    flex: 0 0 15%;
+    /* make sidebar flexible (responsive to screen size)  */
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+
+}
+
+h2,
+li {
+    margin: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    /* fill remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: green;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.widgets-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*Allow to shhift on second row if there is less space */
+    gap: 20px;
+    /* space between widgets */
+    padding: 20px;
+    flex-grow: 1;
+    /*widgets will use extra space */
+}
+
+.widget {
+    background: #2196F3;
+    color: white;
+    flex: 1 1 250px;
+    /*widgets auto-resize with minimum width */
+    border-radius: 8px;
+    /* rounder corners */
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    /* push footer to bottom */
+}
