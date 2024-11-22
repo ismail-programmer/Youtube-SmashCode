@@ -57,3 +57,22 @@
     /* flex-wrap: wrap; */
 
 }
+
+/* Media query */
+@media (min-width: 480px) and (max-width: 768px) {
+    * {
+        background-color: red;
+        color: green;
+    }
+
+    .container-4 {
+        font-size: 32px;
+    }
+}
+
+/* media type orientation */
+@media (orientation: potrait) {
+    * {
+        background-color: blue;
+    }
+}
