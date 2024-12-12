@@ -76,3 +76,36 @@
         background-color: blue;
     }
 }
+
+
+/* grid css */
+.yellow {
+    background-color: yellow;
+    border: 2px solid;
+}
+
+.blue {
+    background-color: blue;
+    border: 2px solid;
+
+}
+
+.green {
+    background-color: green;
+    border: 2px solid;
+
+}
+
+.brown {
+    background-color: brown;
+    border: 2px solid;
+
+}
+
+
+.grid-container {
+
+    display: grid;
+    grid-template-columns: 50px 100px 150px 200px;
+    grid-template-rows: 50px 100px 150px 200px;
+}
