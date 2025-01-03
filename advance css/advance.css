@@ -106,7 +106,7 @@
 .grid-container {
     background-color: lightblue;
     display: grid;
-    grid-template-columns: 2fr 3fr 1fr auto;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     /* grid-template-rows: 50px 100px 150px 200px; */
     gap: 10px 5px;
 }
