@@ -1,74 +1,60 @@
+* {
+  background-color: red;
+}
 .grid-container {
-
-    display: grid;
-    text-align: center;
-    font-size: larger;
-    height: 100vh;
-    border: 2px solid;
-    /* grid-template-columns: [first] 1fr [second] 2fr [third] 1fr [fourth];
+  display: grid;
+  text-align: center;
+  font-size: larger;
+  height: 100vh;
+  border: 2px solid;
+  /* grid-template-columns: [first] 1fr [second] 2fr [third] 1fr [fourth];
     grid-template-rows: [a] 100px [b] auto [c] 50px; */
 
-    grid-template-areas:
-        "header header header sidebar"
-        "content content-2 content-2 sidebar"
-        "footer footer footer sidebar"
-    ;
-
-
-
-
-
-
+  grid-template-areas:
+    "header header header sidebar"
+    "content content-2 content-2 sidebar"
+    "footer footer footer sidebar";
 }
 
-
 .header {
-    background-color: green;
-    border: 2px solid;
-    /* grid-column: first / fourth;
+  background-color: green;
+  border: 2px solid;
+  /* grid-column: first / fourth;
     grid-row: a / b; */
-    grid-area: header;
-
-
+  grid-area: header;
 }
 
 .sidebar {
-    background-color: yellow;
-    border: 2px solid;
-    /* grid-column: first / second;
+  background-color: yellow;
+  border: 2px solid;
+  /* grid-column: first / second;
     grid-row: b / c; */
 
-    grid-area: sidebar;
-
-
-
+  grid-area: sidebar;
 }
 
 .content {
-    background-color: red;
-    border: 2px solid;
-    /* grid-column: second / third;
+  background-color: red;
+  border: 2px solid;
+  /* grid-column: second / third;
     grid-row: b / c; */
-    grid-area: content;
-
+  grid-area: content;
 }
 
 .content-2 {
-    background-color: purple;
-    border: 2px solid;
-    /* grid-column: third / fourth;
+  background-color: purple;
+  border: 2px solid;
+  /* grid-column: third / fourth;
     grid-row: b / c; */
-    grid-area: content-2
+  grid-area: content-2;
 }
 
 .footer {
-    background-color: black;
-    color: white;
-    border: 2px solid;
-    /* grid-column: first / fourth;
+  background-color: black;
+  color: white;
+  border: 2px solid;
+  /* grid-column: first / fourth;
     grid-row: c / c; */
 
-    grid-area: footer;
-
-
+  grid-area: footer;
 }

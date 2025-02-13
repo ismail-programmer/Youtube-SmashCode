@@ -1,120 +1,108 @@
 /* Flexbox */
 .container {
-    background-color: yellow;
-    display: flex;
-    width: 550px;
-    height: 500px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* shorthand for flex direction and flex wrap */
-    /* flex-flow: row wrap; */
+  background-color: yellow;
+  display: flex;
+  width: 550px;
+  height: 500px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* shorthand for flex direction and flex wrap */
+  /* flex-flow: row wrap; */
 
-    /* for main axis */
-    justify-content: space-evenly;
+  /* for main axis */
+  justify-content: space-evenly;
 
-    /* for cross axis */
-    align-items: baseline;
-    align-content: center;
+  /* for cross axis */
+  align-items: baseline;
+  align-content: center;
 }
 
 .flexItem {
-
-    background-color: blue;
-    border: 2px solid;
-    width: 200px;
-    height: 100px;
+  background-color: blue;
+  border: 2px solid;
+  width: 200px;
+  height: 100px;
 }
 
 .container-2,
 .container-3 {
-    background-color: red;
-    display: flex;
-    width: 550px;
-    height: 500px;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-
+  background-color: red;
+  display: flex;
+  width: 550px;
+  height: 500px;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
 }
 
-
 .item {
-
-    background-color: blue;
-    border: 2px solid;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    align-content: center;
+  background-color: blue;
+  border: 2px solid;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-content: center;
 }
 
 .container-4 {
-    background-color: red;
-    display: flex;
-    width: 550px;
-    height: 500px;
-    flex-direction: row;
-    align-items: flex-end;
-    /* flex-wrap: wrap; */
-
+  background-color: red;
+  display: flex;
+  width: 550px;
+  height: 500px;
+  flex-direction: row;
+  align-items: flex-end;
+  /* flex-wrap: wrap; */
 }
 
 /* Media query */
 @media (min-width: 480px) and (max-width: 768px) {
-    * {
-        background-color: red;
-        color: green;
-    }
+  * {
+    background-color: red;
+    color: green;
+  }
 
-    .container-4 {
-        font-size: 32px;
-    }
+  .container-4 {
+    font-size: 32px;
+  }
 }
 
 /* media type orientation */
 @media (orientation: potrait) {
-    * {
-        background-color: blue;
-    }
+  * {
+    background-color: blue;
+  }
 }
-
 
 /* grid css */
 .yellow {
-    background-color: yellow;
-    border: 2px solid;
+  background-color: yellow;
+  border: 2px solid;
 }
 
 .blue {
-    background-color: blue;
-    border: 2px solid;
-
+  background-color: blue;
+  border: 2px solid;
 }
 
 .green {
-    background-color: green;
-    border: 2px solid;
-
+  background-color: green;
+  border: 2px solid;
 }
 
 .brown {
-    background-color: brown;
-    border: 2px solid;
-
+  background-color: brown;
+  border: 2px solid;
 }
-
 
 .grid-container {
-    background-color: lightblue;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    /* grid-template-rows: 50px 100px 150px 200px; */
-    gap: 10px 5px;
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* grid-template-rows: 50px 100px 150px 200px; */
+  gap: 10px 5px;
 }
 
-
 .specifyDiv {
-    /* grid-row: 2/ span 3;
+  /* grid-row: 2/ span 3;
     grid-column: 2/ span 3; */
-    grid-area: 2 / 2 / 5 / 5;
-
+  grid-area: 2 / 2 / 5 / 5;
 }
