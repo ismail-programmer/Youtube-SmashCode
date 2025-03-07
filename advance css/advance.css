@@ -1,3 +1,13 @@
+/* Global Variables */
+:root {
+  --primaryColor: black;
+  --secondaryColor: skyblue;
+}
+
+body {
+  background-color: var(--primaryColor, black);
+}
+
 /* Flexbox */
 .container {
   background-color: yellow;
@@ -56,7 +66,7 @@
 /* Media query */
 @media (min-width: 480px) and (max-width: 768px) {
   * {
-    background-color: red;
+    background-color: var(--primaryColor, pink);
     color: green;
   }
 
@@ -74,12 +84,13 @@
 
 /* grid css */
 .yellow {
-  background-color: yellow;
+  background-color: var(--secondaryColor);
   border: 2px solid;
 }
 
 .blue {
-  background-color: blue;
+  --divColor: pink;
+  background-color: var(--divColor);
   border: 2px solid;
 }
 
