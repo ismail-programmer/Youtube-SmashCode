@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+.container {
+    margin-bottom: 40px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+    margin: 20px auto;
+}
+/* 1. Basic Syntax */
+.basic {
+    animation-name: move;
+    animation-duration: 2s;
+    /* animation: move 2s; */
+}
+@keyframes move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100px); }
+}
+
+/* 2. Animation-name */
+.anim-name {
+    animation-name: slide;
+    animation-duration: 2s;
+    /* animation: slide 2s; */
+}
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(100px); }
+}
+
+/* 3. Animation-duration */
+.anim-duration {
+    animation-name: grow;
+    animation-duration: 3s;
+    /* animation: grow 3s; */
+}
+@keyframes grow {
+    from { width: 50px; }
+    to { width: 150px; }
+}
+
+/* 4. Animation-Timing-function */
+.timing-function {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    /* animation: bounce 2s ease-in-out; */
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+/* 5. Animation-Delay */
+.anim-delay {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 5s;
+    /* animation: fadeIn 2s ease-in 2s; */
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 6. Animation-Direction */
+.anim-direction {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    /* animation: rotate 2s alternate infinite; */
+}
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+/* 7. Animation-Iteration-count */
+.anim-iteration {
+    animation-name: colorChange;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation: colorChange 2s linear 3; */
+}
+@keyframes colorChange {
+    from { background-color: steelblue; }
+    to { background-color: coral; }
+}
+
+/* 8. Animation-fill-mode */
+.anim-fill {
+    animation-name: shrink;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    /* animation: shrink 2s forwards; */
+}
+@keyframes shrink {
+    from { width: 100px; }
+    to { width: 50px; }
+}
+
+/* 9. Animation-Play-state */
+.anim-play {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    /* animation: move 2s linear infinite; */
+}
+
+/* 10. Animation-composition */
+.anim-composition {
+    animation-name: move, colorChange;
+    animation-duration: 2s, 2s;
+    animation-timing-function: ease-in-out, alternate;
+    animation-iteration-count: infinite, infinite;
+    /* animation: move 2s ease-in-out, colorChange 2s alternate infinite; */
+}
