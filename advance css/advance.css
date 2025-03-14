@@ -34,6 +34,29 @@ body {
   height: 100px;
 }
 
+.effect:hover {
+  /* width: 300px; */
+  background-color: pink;
+  transition: background-color 1s ease;
+}
+
+.box1 {
+  background-color: red;
+  border: 2px solid purple;
+  width: 50px;
+  height: 50px;
+}
+.transform {
+  /* transform: translate(50px, 50px); */
+  /* transform: translateX(50px); */
+  /* transform: translateY(50px); */
+  /* transform: rotate(45deg); */
+  /* transform: scale(2,2); */
+  /* transform: skew(45deg); */
+  /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+  transform: matrix(2, 1, 0.5, 1, 70, 70);
+}
+
 .container-2,
 .container-3 {
   background-color: red;
@@ -62,7 +85,6 @@ body {
   align-items: flex-end;
   /* flex-wrap: wrap; */
 }
-
 
 /* Media query */
 @media (min-width: 480px) and (max-width: 768px) {
