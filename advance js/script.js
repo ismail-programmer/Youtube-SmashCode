@@ -57,3 +57,45 @@ const increment = counter();
 increment(); // Output: 1
 increment(); // Output: 2
 increment(); // Output: 3
+
+// currying
+
+function one(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log(one(5)(10)(20));
+
+// debounce and throttle
+
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func(...args), delay);
+  };
+}
+
+function searchHandler(event) {
+  console.log("Search for:", event.target.value);
+}
+
+document
+  .getElementById("search")
+  .addEventListener("input", debounce(searchHandler, 300));
+
+// Generator functions
+
+function* Generator() {
+  yield 2 + 3;
+  yield 5 * 3;
+  yield 10 + 4;
+}
+const number1 = Generator();
+console.log(number1.next().value);
+console.log(number1.next().value);
+console.log(number1.next().value);
