@@ -133,3 +133,59 @@ const total1 = numbers3.reduce(function (GrandTotal, CurrentItemPrice) {
 
 console.log(numbers3);
 console.log(total1);
+
+// Set & Map
+// with obj(key value)
+const database = new Map();
+
+//  add data
+// database.set("name", "ismail");
+// database.set("role", "CEO");
+database.set("name", "ismail").set("role", "CEO");
+database.set("age", "24");
+
+// get data
+console.log(database.get("role"));
+console.log(database.get("age"));
+
+// has true/false
+
+console.log(database.has("name"));
+
+//  size of map
+console.log(database.size);
+
+//delete
+
+console.log(database.delete("age"));
+console.log(database.has("age"));
+
+// clear
+// database.clear();
+
+console.log(database);
+
+// with array
+
+// creating a new database with array
+const arrayDatabase = new Set(["apple", "banana", "mango"]);
+
+// adding new value
+
+console.log(arrayDatabase);
+arrayDatabase.add("cherry");
+console.log(arrayDatabase);
+
+// Has true/false
+
+console.log("Does it have banana? ", arrayDatabase.has("banana"));
+console.log("Does it have Orange? ", arrayDatabase.has("Orange"));
+
+// size
+console.log("quantity of fruits: ", arrayDatabase.size);
+
+arrayDatabase.delete("cherry");
+console.log(arrayDatabase);
+
+arrayDatabase.clear();
+console.log(arrayDatabase);
