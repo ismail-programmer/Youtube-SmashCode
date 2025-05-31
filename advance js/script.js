@@ -99,3 +99,37 @@ const number1 = Generator();
 console.log(number1.next().value);
 console.log(number1.next().value);
 console.log(number1.next().value);
+
+// array methods
+
+// 1.map method
+
+const numbers1 = [65, 44, 12, 5];
+
+const newArray = numbers1.map(myFunction);
+function myFunction(num) {
+  return num * 10;
+}
+console.log(numbers1);
+console.log(newArray);
+
+// 2. Filter method
+
+const ages = [32, 33, 15, 50];
+const result = ages.filter(checkAdult);
+function checkAdult(age) {
+  return age >= 18;
+}
+
+console.log(ages);
+console.log(result);
+
+// 3. Reduce
+
+const numbers3 = [10, 20, 30, 40];
+const total1 = numbers3.reduce(function (GrandTotal, CurrentItemPrice) {
+  return GrandTotal + CurrentItemPrice;
+}, 0);
+
+console.log(numbers3);
+console.log(total1);
