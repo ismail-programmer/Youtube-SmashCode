@@ -189,3 +189,21 @@ console.log(arrayDatabase);
 
 arrayDatabase.clear();
 console.log(arrayDatabase);
+
+// Promise
+
+function display(info) {
+  console.log("INfo recived");
+}
+
+let check = new Promise(function (ok, fail) {
+  let value = 5;
+  if (value > 0) {
+    ok("Possitive");
+  } else {
+    fail("Negative Value");
+  }
+});
+
+check.then(display);
+
