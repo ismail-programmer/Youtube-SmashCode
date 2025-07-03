@@ -207,3 +207,50 @@ let check = new Promise(function (ok, fail) {
 
 check.then(display);
 
+// Symbols
+// Symbol iterator
+
+const arr = [5, 2, 3];
+const test2 = arr[Symbol.iterator]();
+console.log(test2.next());
+console.log(test2.next());
+console.log(test2.next());
+
+// To String Tag
+const obj = {
+  [Symbol.toStringTag]: "Custom Data",
+};
+
+console.log(Object.prototype.toString.call(obj));
+
+// WeakMap
+
+const secret = new WeakMap();
+function User(name) {
+  secret.set(this, { name });
+}
+
+const user1 = new User("Ismail");
+const user2 = new User("Smash");
+console.log(secret.get(user1));
+console.log(secret.get(user2));
+
+// Weak Set
+
+const visitedSet = new WeakSet();
+let place = { name: "Park" };
+visitedSet.add(place);
+console.log(visitedSet.has(place));
+
+const privateData = new WeakMap();
+class Person {
+  constructor(name) {
+    privateData.set(this, { name });
+  }
+  getName() {
+    return privateData.get(this).name;
+  }
+}
+
+const person1 = new Person("Ismail");
+console.log(person1.getName());
