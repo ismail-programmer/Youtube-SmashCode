@@ -254,3 +254,19 @@ class Person {
 
 const person1 = new Person("Ismail");
 console.log(person1.getName());
+
+// BigInt
+
+const big = 1342141241241212412432n;
+const reguler = 108;
+
+console.log(big + 5n);
+// console.log(big + reguler);
+
+// Intl APi
+
+const number4 = 1241231.78;
+
+const usFormatter = new Intl.NumberFormat("en-US");
+console.log(number4);
+console.log(usFormatter.format(number4));
