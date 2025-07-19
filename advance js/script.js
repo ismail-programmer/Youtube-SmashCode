@@ -270,3 +270,37 @@ const number4 = 1241231.78;
 const usFormatter = new Intl.NumberFormat("en-US");
 console.log(number4);
 console.log(usFormatter.format(number4));
+
+// Composed Function
+const add2 = (x) => x + 2;
+const multiply3 = (x) => x * 3;
+
+const composedFunction = (x) => add2(multiply3(x));
+console.log(composedFunction(4));
+
+// ad2((12) + 2) => 14
+
+function Car(make, model) {
+  return {
+    make,
+    model,
+    drive() {
+      console.log("Car is driving");
+    },
+  };
+}
+const car1 = Car("Toyota", "Aqua");
+car1.drive();
+
+// Functional Composition with Factory Functions
+
+const multiply2 = (x) => x * 2;
+const subtract5 = (x) => x - 5;
+function createCalculator() {
+  return {
+    calculate: (x) => subtract5(multiply2(x)),
+  };
+}
+const calculator = createCalculator();
+console.log(calculator.calculate(10));
+// sub(20 - 5 ) => 15
