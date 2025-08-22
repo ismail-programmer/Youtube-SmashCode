@@ -304,3 +304,57 @@ function createCalculator() {
 const calculator = createCalculator();
 console.log(calculator.calculate(10));
 // sub(20 - 5 ) => 15
+
+// api integeration
+
+// get request
+const fetchData = () => {
+  fetch("https://fakestoreapi.com/products")
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error("Error:", error));
+};
+
+// post request
+const postData = () => {
+  fetch("https://fakestoreapi.com/products", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      id: 0,
+      title: "string",
+      price: 0.1,
+      description: "string",
+      category: "string",
+      image: "http://example.com",
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Product added sucessefully"))
+    .catch((error) => console.error("Error:", error));
+};
+
+// update request
+const changeproduct = { title: "Updated Product", price: 39.99 };
+
+const updateData = () => {
+  fetch("https://fakestoreapi.com/products/1", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(changeproduct),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Product sucessfuly updated"))
+    .catch((error) => console.error("Error:", error));
+};
+
+// delete request
+
+const deleteData = () => {
+  fetch("https://fakestoreapi.com/products/1", {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Product deeleted sucessfully"))
+    .catch((error) => console.error("Error:", error));
+};
