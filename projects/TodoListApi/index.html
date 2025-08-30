@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .todo-form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        flex: 1;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 8px 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .add-btn {
+        background-color: #4caf50;
+        color: white;
+      }
+      .add-btn:hover {
+        background-color: #45a049;
+      }
+
+      .todo-list {
+        list-style: none;
+        padding: 0;
+      }
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .todo-text {
+        display: block;
+        word-wrap: break-word;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 6px;
+      }
+      .btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+      }
+
+      .edit-btn {
+        background-color: #2196f3;
+        color: white;
+        margin-right: 5px;
+      }
+      .edit-btn:hover {
+        background-color: #0b7dda;
+      }
+      .delete-btn {
+        background-color: #f44336;
+        color: white;
+      }
+      .delete-btn:hover {
+        background-color: #da190b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Todo List</h1>
+    <p>Add, edit, or delete your tasks (Using an API)</p>
+
+    <!-- FOrm to add  or edit  a todo -->
+    <form id="todoForm" class="todo-form">
+      <input type="hidden" id="todoId" value="" />
+      <input
+        type="text"
+        id="todoTitle"
+        placeholder="Enter a Task...."
+        required
+      />
+      <button type="submit" class="add-btn">Add Task</button>
+    </form>
+
+    <!-- List to show todos -->
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <script>
+      // API base url
+      const apiUrl = "https://jsonplaceholder.typicode.com/todos";
+      // Local array to store todos (to simulate real changes)
+      let todos = [];
+
+      //   Get Html element
+      const todoForm = document.getElementById("todoForm");
+      const todoIdInput = document.getElementById("todoId");
+      const todoTitleInput = document.getElementById("todoTitle");
+      const todoList = document.getElementById("todoList");
+
+      // Function to get todos from api (GET)
+
+      function getTodos() {
+        //getting todos with limit
+        fetch(apiUrl + "?_limit=10")
+          .then((response) => response.json())
+          .then((data) => {
+            //  Store in local array
+            todos = data;
+            // Update UI
+            updateTodoList();
+            console.log("Fetched todos:", todos);
+          })
+          .catch((error) => console.log("Error getting todos:", error));
+      }
+
+      //   Function to update the UI with todos
+
+      function updateTodoList() {
+        // clear the list
+        todoList.innerHTML = "";
+        todos.forEach((todo) => {
+          const li = document.createElement("li");
+          li.className = "todo-item";
+
+          // Updated Html
+          li.innerHTML = `
+          <span class="todo-text">  ${todo.title}  </span>
+          <div class="btn-wrapper">
+             <button class = "edit-btn" onclick="editTodo(${todo.id})"> Edit </button>
+             <button class = "delete-btn" onclick="deleteTodo(${todo.id})"> Delete </button>
+              </div>
+          `;
+          todoList.appendChild(li);
+        });
+      }
+
+      //   Handle form submit
+      todoForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop page reload
+        const id = todoIdInput.value;
+        const title = todoTitleInput.value;
+
+        if (id) {
+          // update exsisting todo
+          updateTodo(Number(id), title);
+        } else {
+          //Add new todo
+          addTodo(title);
+        }
+
+        // Clear the form
+        todoIdInput.value = "";
+        todoTitleInput.value = "";
+        todoForm.querySelector("button").textContent = "Add Task";
+      });
+
+      //   Function to add a new todo
+      function addTodo(title) {
+        fetch(apiUrl, {
+          method: "Post",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ title, completed: false, userId: 1 }),
+        })
+          .then((response) => response.json)
+          .then((data) => {
+            // add to start of local array (to show at top)
+            todos.unshift({ id: Date.now(), title, completed: false });
+            // Update UI
+            updateTodoList();
+            console.log("Added todo:", { title });
+          })
+          .catch((error) => console.log("Error in adding todo:", error));
+      }
+
+      //   load todos when page start
+
+      //   Function to update a todo (PUT)
+      function updateTodo(id, title) {
+        fetch(`${apiUrl}/${id}`, {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ title, completed: false, userId: 1 }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // update local array
+            todos = todos.map((todo) =>
+              todo.id === id ? { ...todo, title } : todo
+            );
+            // Update UI
+            updateTodoList();
+            console.log("Updated todo:", { id, title });
+          });
+      }
+
+      //   Function to fill form for editing
+      function editTodo(id) {
+        const todo = todos.find((todo) => todo.id === id);
+        if (todo) {
+          todoIdInput.value = todo.id;
+          todoTitleInput.value = todo.title;
+          todoForm.querySelector("button").textContent = "Update task";
+
+          //   Focus on input feild
+          todoTitleInput.focus();
+          //Scrol to input
+          todoTitleInput.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          console.log("Editing todo:", todo);
+        }
+      }
+
+      //   Function to delete a todo (Delete)
+
+      function deleteTodo(id) {
+        fetch(`${apiUrl}/${id}`, {
+          method: "DELETE",
+        })
+          .then(() => {
+            // Remove from local array
+            todos = todos.filter((todo) => todo.id !== id);
+
+            //   Update ui
+            updateTodoList();
+            console.log("Deleted todo:", { id });
+          })
+          .catch((error) => console.log("Error deleting todo:", error));
+      }
+
+      getTodos();
+    </script>
+  </body>
+</html>
