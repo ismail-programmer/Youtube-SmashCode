@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart Application with API</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shopping Cart Application with API</h1>
+      <div class="product-form">
+        <input type="text" id="newProductName" placeholder="Product name" />
+        <input type="number" id="newProductPrice" placeholder="Price" />
+        <input type="text" id="newProductCategory" placeholder="Category" />
+        <button id="addProduct">Add Product</button>
+      </div>
+      <input type="text" id="search" placeholder="Search products..." />
+      <div class="products" id="productList"></div>
+      <div class="cart" id="cartList"></div>
+      <button id="applyDiscount">Apply 10% Discount</button>
+      <p>Total: <span id="total">0</span></p>
+    </div>
+
+    <script>
+      //   Api alls using JSONplaeholder
+      const API_URL = "https://jsonplaceholder.typicode.com/posts";
+
+      const fetchProducts = async () => {
+        try {
+          const response = await fetch(API_URL);
+          const data = await response.json();
+          return data.slice(0, 5).map((item) => ({
+            id: item.id,
+            name: item.title.slice(0, 20),
+            price: Math.floor(Math.random() * 1000) + 50,
+            category: ["Electronics", "Books", "Clothing"][
+              Math.floor(Math.random() * 3)
+            ],
+          }));
+        } catch (error) {
+          console.log("Error fetching products:", error);
+          return [];
+        }
+      };
+
+      const addProductAPI = async (product) => {
+        try {
+          const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "content-Type": "application/json" },
+            body: JSON.stringify({
+              title: product.name,
+              body: `Price: ${product.price}, Category: ${product.category}`,
+              userId: 1,
+            }),
+          });
+          const data = await response.json();
+          return { id: data.id, ...product };
+        } catch (error) {
+          console.log("Error adding product", error);
+          return null;
+        }
+      };
+
+      //   Main logic
+      (async () => {
+        let products = await fetchProducts();
+        const productList = document.getElementById("productList");
+        const addProductBtn = document.getElementById("addProduct");
+        const addProductName = document.getElementById("addProductName");
+        const addProductPrice = document.getElementById("addProductPrice");
+        const addProdutCategory = document.getElementById("addProductCategory");
+
+        // Render Products
+        const renderProducts = (items) => {
+          productList.innerHTML = items
+            .map(
+              (p) => `
+                 <div class="product">
+                              ${p.name} - $${p.price} (${p.category})
+                              <div>
+                                  <button onclick="addToCart(${p.id})">Add to Cart</button>
+                                  <button onclick="deleteProduct(${p.id})">Delete</button>
+                              </div>
+                          </div>
+      `
+            )
+            .join("");
+        };
+        renderProducts(products);
+
+        // Add new product
+        addProductBtn.addEventListener("click", async () => {
+          const prodcut = {
+            name: newProductName.value || "New Product",
+            price: parseFloat(newProductPrice.value) || 100,
+            category: newProductCategory.value || "General",
+          };
+        const newProduct = await addProductAPI(product);
+                if (newProduct) {
+                    products.push(newProduct);
+                    renderProducts(products);
+                    newProductName.value = '';
+                    newProductPrice.value = '';
+                    newProductCategory.value = '';
+                }
+        });
+
+        
+
+
+
+
+      })();
+    </script>
+  </body>
+</html>
