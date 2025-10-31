@@ -44,6 +44,7 @@
         }
       };
 
+      //
       const addProductAPI = async (product) => {
         try {
           const response = await fetch(API_URL, {
@@ -63,6 +64,104 @@
         }
       };
 
+      const deleteProuctAPI = async (id) => {
+        try {
+          await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+          return true;
+        } catch (error) {
+          console.error("Error deleting product:", error);
+          return false;
+        }
+      };
+
+      // Debounce for search
+      const debounce = (func, delay) => {
+        let timeout;
+        return (...args) => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(null, args), delay);
+        };
+      };
+
+      // Closure for cart state
+      const cartManager = (() => {
+        let cart = [];
+        return {
+          add: (item) => {
+            const existingItem = cart.find((i) => i.id === item.id);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ ...item, quantity: 1 });
+            }
+          },
+          remove: (id) => (cart = cart.filter((item) => item.id !== id)),
+          updateQuantity: (id, newQuantity) => {
+            const item = cart.find((i) => i.id === id);
+            if (item) {
+              if (newQuantity <= 0) {
+                cart = cart.filter((i) => i.id !== id);
+              } else {
+                item.quantity = newQuantity;
+              }
+            }
+          },
+          getItems: () => cart,
+        };
+      })();
+
+      // Generator function for unique IDs
+      function* idGenerator() {
+        let id = 100;
+        while (true) yield id++;
+      }
+      const gen = idGenerator();
+
+      // Factory Fnction for product objects with symbol
+      const uniqueKey = Symbol("uniqueKey");
+      const createProduct = (name, price, category) => ({
+        id: gen.next().value,
+        name,
+        price,
+        category,
+        [uniqueKey]: "custom-data",
+      });
+
+      // web worker for heavy computation
+      const worker = new Worker(
+        URL.createObjectURL(
+          new Blob(
+            [
+              `
+    self.onmessage = (e) => {
+    const total = e.data.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    postMessage(total);
+    };
+      `,
+            ],
+            { type: "text/javascript" }
+          )
+        )
+      );
+
+      // Currying for discount
+      const applyDiscount = (discount) => (total) => total * (1 - discount);
+      const tenPercentOff = applyDiscount(0.1);
+
+      // Functional Compostion
+
+      const compose =
+        (...fns) =>
+        (x) =>
+          fns.reduceRight((y, f) => f(y), x);
+      const formatAndDiscount = (data, addDiscount) => {
+        const withDiscountOptions = compose(
+          (total) => new Intl.NumberFormat().format(total),
+          addDiscount ? tenPercentOff : (x) => x
+        );
+        return withDiscountOptions(data);
+      };
+
       //   Main logic
       (async () => {
         let products = await fetchProducts();
@@ -71,6 +170,9 @@
         const addProductName = document.getElementById("addProductName");
         const addProductPrice = document.getElementById("addProductPrice");
         const addProdutCategory = document.getElementById("addProductCategory");
+        const searchInput = document.getElementById("search");
+        const cartList = document.getElementById("cartList");
+        const totalDisplay = document.getElementById("total");
 
         // Render Products
         const renderProducts = (items) => {
@@ -92,26 +194,108 @@
 
         // Add new product
         addProductBtn.addEventListener("click", async () => {
-          const prodcut = {
+          const product = {
             name: newProductName.value || "New Product",
             price: parseFloat(newProductPrice.value) || 100,
             category: newProductCategory.value || "General",
           };
-        const newProduct = await addProductAPI(product);
-                if (newProduct) {
-                    products.push(newProduct);
-                    renderProducts(products);
-                    newProductName.value = '';
-                    newProductPrice.value = '';
-                    newProductCategory.value = '';
-                }
+          const newProduct = await addProductAPI(product);
+          if (newProduct) {
+            products.push(newProduct);
+            renderProducts(products);
+            newProductName.value = "";
+            newProductPrice.value = "";
+            newProductCategory.value = "";
+          }
         });
 
-        
+        // Delete Product
+        window.deleteProduct = async function (id) {
+          const sucess = await deleteProuctAPI(id);
+          if (sucess) {
+            products = products.filter((p) => p.id !== id);
+            renderProducts(products);
+          }
+        };
 
+        // Search with filter and debounce
+        const searchProducts = debounce((query) => {
+          const filtered = products.filter((p) =>
+            p.name.toLowerCase().includes(query.toLowerCase())
+          );
+          renderProducts(filtered);
+        }, 300);
+        searchInput.addEventListener("input", (e) =>
+          searchProducts(e.target.value)
+        );
 
+        // Add to cart
+        window.addToCart = function (id) {
+          const product = products.find((p) => p.id === id);
+          const cartItems = cartManager.getItems();
+          const isExist = cartItems.find((p) => p.id === id);
+          if (!isExist) {
+            const cartItem = createProduct(
+              product.name,
+              product.price,
+              product.category
+            );
+            cartManager.add(cartItem);
+            renderCart();
+          } else {
+            updateQuantity(id, isExist.quantity + 1);
+          }
+        }.bind(null);
 
+        // update quantity
+        window.updateQuantity = function (id, newQuantity) {
+          cartManager.updateQuantity(id, newQuantity);
+          renderCart();
+        };
 
+        // Render Cart
+        const renderCart = () => {
+          const items = cartManager.getItems();
+          (cartList.innerHTML = items.map(
+            (item) => `
+  <div class="cart-item">
+                        <span class="cart-item-text">${item.name} - $${
+              item.price
+            } </span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity(${item.id}, ${
+              item.quantity - 1
+            })">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="updateQuantity(${item.id}, ${
+              item.quantity + 1
+            })">+</button>
+                        </div>
+                        <button onclick="cartManager.remove(${
+                          item.id
+                        });renderCart()">Remove</button>
+                    </div>
+  `
+          )).join("");
+          updateTotal(items);
+        };
+
+        window.renderCart = renderCart;
+        // update total
+        const updateTotal = (items, addDiscount) => {
+          worker.postMessage(items);
+          worker.onmessage = (e) => {
+            totalDisplay.textContent = formatAndDiscount(e.data, addDiscount);
+          };
+        };
+
+        // apply discount
+        document
+          .getElementById("applyDiscount")
+          .addEventListener("click", () => {
+            const items = cartManager.getItems();
+            updateTotal(items, true);
+          });
       })();
     </script>
   </body>
